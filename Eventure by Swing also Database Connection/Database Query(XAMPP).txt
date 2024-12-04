@@ -1,0 +1,26 @@
+CREATE DATABASE icr_management;
+
+USE icr_management;
+
+-- Table for user accounts
+CREATE TABLE users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    first_name VARCHAR(50),
+    last_name VARCHAR(50),
+    username VARCHAR(50) UNIQUE NOT NULL,
+    password VARCHAR(255) NOT NULL,
+    email VARCHAR(100)
+);
+
+-- Table for events
+CREATE TABLE events (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100),
+    description TEXT,
+    date DATE,
+    location VARCHAR(100)
+);
+
+
+
+
